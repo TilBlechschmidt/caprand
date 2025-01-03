@@ -15,7 +15,7 @@ exclude = [
 
 [dependencies]
 cortex-m = "0.7"
-embassy-rp = "0.1"
+embassy-rp = "0.2"
 rp-pac = { version = "6", default-features = false }
 
 getrandom = { version = "0.2", default-features = false }
