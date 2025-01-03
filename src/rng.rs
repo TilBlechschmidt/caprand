@@ -129,8 +129,10 @@ impl CapRng {
 
             // even "invalid" samples are included in the hash
             h.update([v]);
+            defmt::info!("Got seed sample #{}", valid_samples);
         }
 
+        defmt::info!("Finalizing hash");
         let seed: [u8; 32] = h.finalize().into();
         Ok(Self(ChaCha20Rng::from_seed(seed)))
     }
